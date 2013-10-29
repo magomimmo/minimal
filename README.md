@@ -96,3 +96,7 @@ be establish and start BREPLing.
 Copyright (C) 2013 Giacomo (Mimmo) Cosenza aka Magomimmo
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+[1]: https://github.com/cemerick/piggieback
+[2]: https://github.com/cemerick
+[3]: http://localhost:3000

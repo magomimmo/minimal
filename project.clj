@@ -6,10 +6,21 @@
 
   :min-lein-version "2.2.0"
 
-  :source-paths ["src/clj"]
+  :source-paths ["src/clj" 
+                 "dev-resources/tools/http"
+                 
+                 ;; cljs stuff
+                 "src/cljs"
+                 "dev-resources/tools/repl"]
+
+  :resources-paths ["dev-resources"]
+  :clean-targets ["out" "repl"]
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-1978"]]
+                 [org.clojure/clojurescript "0.0-1978"]
+                 [com.cemerick/piggieback "0.1.0"]
+                 [ring "1.2.0"]
+                 [compojure "1.1.5"]]
 
   :plugins [[lein-cljsbuild "1.0.0-SNAPSHOT"]]
 
@@ -17,23 +28,16 @@
 
   :cljsbuild
   {:builds {:whitespace
-            {:source-paths ["src/cljs" "dev-resources/tools/repl"]
+            {:source-paths ["src/cljs" 
+                            "dev-resources/tools/repl"]
              :compiler
              {:output-to "dev-resources/public/js/whitespace.js"
               :optimizations :whitespace
               :pretty-print true}}}}
 
-  :profiles {:dev {:clean-targets ["out" "repl"]
-                   :source-paths ["dev-resources/tools/http"]
-                   :resources-paths ["dev-resources"]
-
-                   :dependencies [[com.cemerick/piggieback "0.1.0"]
-                                  [ring "1.2.0"]
-                                  [compojure "1.1.5"]]
-
-                   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-                   :injections [(require '[cljs.repl.browser :as brepl]
-                                         '[cemerick.piggieback :as pb])
-                                (defn browser-repl []
+  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+  :injections [(require '[cljs.repl.browser :as brepl]
+                        '[cemerick.piggieback :as pb])
+               (defn browser-repl []
                                   (pb/cljs-repl :repl-env
-                                                (brepl/repl-env :port 9000)))]}})
+                                                (brepl/repl-env :port 9000)))])

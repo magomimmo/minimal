@@ -16,14 +16,14 @@
   :hooks [leiningen.cljsbuild]
 
   :cljsbuild
-  {:builds {:white
+  {:builds {:whitespace
             {:source-paths ["src/cljs" "dev-resources/tools/repl"]
              :compiler
-             {:output-to "dev-resources/public/js/whitespce.js"
+             {:output-to "dev-resources/public/js/whitespace.js"
               :optimizations :whitespace
               :pretty-print true}}}}
 
-  :profiles {:dev {:clean-targets ["out"]
+  :profiles {:dev {:clean-targets ["out" "repl"]
                    :source-paths ["dev-resources/tools/http"]
                    :resources-paths ["dev-resources"]
 

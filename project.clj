@@ -6,15 +6,15 @@
 
   :min-lein-version "2.2.0"
 
-  :source-paths ["src/clj" 
+  :source-paths ["src/clj"
                  "dev-resources/tools/http"
-                 
-                 ;; cljs stuff
+
+                 ;; cljs stuff for brepl
                  "src/cljs"
                  "dev-resources/tools/repl"]
 
   :resources-paths ["dev-resources"]
-  :clean-targets ["out" "repl"]
+  :clean-targets ["out"]
 
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-1978"]
@@ -28,7 +28,7 @@
 
   :cljsbuild
   {:builds {:whitespace
-            {:source-paths ["src/cljs" 
+            {:source-paths ["src/cljs"
                             "dev-resources/tools/repl"]
              :compiler
              {:output-to "dev-resources/public/js/whitespace.js"

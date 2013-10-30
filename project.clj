@@ -14,7 +14,6 @@
                  "dev-resources/tools/repl"]
 
   :resources-paths ["dev-resources"]
-  :clean-targets ["out"]
 
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-1978"]
@@ -22,7 +21,7 @@
                  [ring "1.2.0"]
                  [compojure "1.1.5"]]
 
-  :plugins [[lein-cljsbuild "1.0.0-SNAPSHOT"]]
+  :plugins [[lein-cljsbuild "0.3.4"]]
 
   :hooks [leiningen.cljsbuild]
 

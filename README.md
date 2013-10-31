@@ -16,8 +16,8 @@ git clone https://github.com/magomimmo/minimal.git
 ```bash
 lein compile
 Compiling ClojureScript.
-Compiling "dev-resources/public/js/whitespce.js" from ["src/cljs" "dev-resources/tools/repl"]...
-Successfully compiled "dev-resources/public/js/whitespce.js" in 11.199011 seconds.
+Compiling "dev-resources/public/js/whitespace.js" from ["src/cljs" "dev-resources/tools/repl"]...
+Successfully compiled "dev-resources/public/js/whitespace.js" in 11.199011 seconds.
 ```
 
 ### Run the ring server
@@ -47,7 +47,7 @@ user=>
 
 You now have two options to launch a browser connect REPL:
 
-* using the traditional `lein trampoline cljsbuil repl-listen`
+* using the traditional `lein trampoline cljsbuild repl-listen`
 * using the [piggieback][1] lib by [Chas Emerick][2]
 
 #### Traditional
@@ -55,43 +55,15 @@ You now have two options to launch a browser connect REPL:
 Open a new terminal windows, `cd` in the main project directory, and issue:
 
 ```clj
-iacomos-MacBook-Pro:minimal mimmo$ lein trampoline cljsbuild repl-listen
+lein trampoline cljsbuild repl-listen
 Running ClojureScript REPL, listening on port 9000.
 "Type: " :cljs/quit " to quit"
-WARNING: Wrong number of args (0) passed to cljs.core/array at line 169 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IEquiv is not a protocol at line 803 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IFn is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol Fn is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol cljs.core/IMeta is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol cljs.core/IWithMeta is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IFn is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol Fn is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol cljs.core/IMeta is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol cljs.core/IWithMeta is not a protocol at line 1007 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IHash is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISequential is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IReduce is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISeqable is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IEquiv is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IWithMeta is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IMeta is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IList is not a protocol at line 1828 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IHash is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISequential is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IReduce is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISeqable is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IEquiv is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IWithMeta is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IList is not a protocol at line 1882 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IHash is not a protocol at line 1959 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISequential is not a protocol at line 1959 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol ISeqable is not a protocol at line 1959 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IList is not a protocol at line 1959 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IPrintWithWriter is not a protocol at line 2012 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol INamed is not a protocol at line 2012 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IChunk is not a protocol at line 2147 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IChunkedNext is not a protocol at line 2179 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
-WARNING: Symbol IChunkedSeq is not a protocol at line 2179 file:/Users/mimmo/.m2/repository/org/clojure/clojurescript/0.0-1978/clojurescript-0.0-1978.jar!/cljs/core.cljs
+WARNING: Symbol ICounted is not a protocol at line 14 /Users/mimmo/Developer/minimal/src/cljs/minimal.cljs
+WARNING: Symbol cljs.core/IMeta is not a protocol at line 5 /Users/mimmo/Developer/minimal/src/cljs/minimal/testing.cljs
+WARNING: Symbol cljs.core/IWithMeta is not a protocol at line 5 /Users/mimmo/Developer/minimal/src/cljs/minimal/testing.cljs
+WARNING: Symbol cljs.core/IMeta is not a protocol at line 5 /Users/mimmo/Developer/minimal/src/cljs/minimal/testing.cljs
+WARNING: Symbol cljs.core/IWithMeta is not a protocol at line 5 /Users/mimmo/Developer/minimal/src/cljs/minimal/testing.cljs
+WARNING: Symbol ICounted is not a protocol at line 14 /Users/mimmo/Developer/minimal/src/cljs/minimal.cljs
 ClojureScript:cljs.user>
 ```
 
